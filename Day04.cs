@@ -83,7 +83,7 @@ namespace AdventOfCode2020
 			       Regex.IsMatch(passport.hgt, hgtPattern) &&
 			       Regex.Match(passport.hgt, hgtNumberPattern) is {Success: true, Value: { } hgtNum} && int.TryParse(hgtNum, out int hgtNumber) &&
 			       Regex.Match(passport.hgt, hgtUnitPattern) is {Success: true, Value: { } hgtUnit} &&
-			       (hgtNumber is >= 150 and <= 193 && hgtUnit is "cm" || (hgtNumber is >= 59 and <= 76 && hgtUnit is "in")) &&
+			       (hgtNumber is >= 150 and <= 193 && hgtUnit is "cm" || hgtNumber is >= 59 and <= 76 && hgtUnit is "in") &&
 			       Regex.IsMatch(passport.hcl, @"^#[0-9a-f]{6}$") &&
 			       Regex.IsMatch(passport.ecl, @"^(amb|blu|brn|gry|grn|hzl|oth)$") &&
 			       Regex.IsMatch(passport.pid, @"^[0-9]{9}$");
