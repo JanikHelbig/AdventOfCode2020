@@ -16,7 +16,8 @@ namespace AdventOfCode2020
                 ("Day  3", new Day03()),
                 ("Day  4", new Day04()),
                 ("Day  5", new Day05()),
-                ("Day  6", new Day06())
+                ("Day  6", new Day06()),
+                ("Day  7", new Day07()),
             };
 
             foreach ((string name, IDay day) in days)
